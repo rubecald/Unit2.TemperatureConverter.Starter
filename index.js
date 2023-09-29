@@ -27,19 +27,19 @@ function convertToCelsius(fahren) {
  */
 function createMessage(fahren, celc) {
   let message ='';
-  const temp = celc;
+  const temp = fahren;
 
-  if (temp < 32) {
+  if (temp <= 32) {
     message = 'very cold';
-  } else if (temp < 64) {
+  } else if (temp <= 64) {
     message = 'cold';
-  } else if (temp < 86) {
+  } else if (temp <= 86) {
     message = "warm";
-  } else if (temp < 100) {
+  } else if (temp <= 100) {
     message = "hot";
   }
-  // return "${fahren} fahrenheit is ${celc} celcius. ${message}";
-  return message;
+  return "The temperature is " + fahren + "°F, which is  " + celc +"°C and it feels " + message;
+  // return message;
 } 
 
 /**
